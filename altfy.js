@@ -3,7 +3,8 @@
 	$.fn.altfy = function() {
 
 		this.filter("img").each(function() {
-			$(this).attr('alt').appendTo('body');
+			var alternative = "<p>" + $(this).attr('alt') + "</p>";
+			$(alternative).appendTo('body');
 		});
 
 		return this;
